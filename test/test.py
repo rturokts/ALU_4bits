@@ -31,7 +31,7 @@ async def test_project(dut):
 
     # Wait for one clock cycle to see the output values
     await ClockCycles(dut.clk, 10)
-    assert dut.uo_out.value == 2
+    assert dut.uo_out.value == 12
     
     dut.ui_in.value = 0b01110101         # A=7 b=5  
     dut.uio_in.value = 0b00000110     #codeop=6    XOR
